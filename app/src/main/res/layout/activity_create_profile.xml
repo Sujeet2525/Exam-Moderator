@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".Create_ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFA500"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join as a Moderator or Admin"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginBottom="20dp" />
+
+            <!-- User Type -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Type"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <RadioGroup
+                android:id="@+id/rgUserType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbModerator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Moderator"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFA500"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFA500"
+                    android:layout_marginStart="32dp" />
+            </RadioGroup>
+
+            <!-- Full Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="#1E1E1E"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxStrokeColor="#FFA500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Full Name"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="#1E1E1E"
+                app:boxStrokeColor="#FFA500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Phone -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="#1E1E1E"
+                app:boxStrokeColor="#FFA500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="#1E1E1E"
+                app:passwordToggleEnabled="true"
+                app:boxStrokeColor="#FFA500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirm Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundColor="#1E1E1E"
+                app:passwordToggleEnabled="true"
+                app:boxStrokeColor="#FFA500">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Date of Birth -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etDob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="DD/MM/YYYY"
+                android:background="@drawable/edittext_background"
+                android:inputType="none"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Upload Picture -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Profile Picture (Optional)"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="6dp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_upload"
+                android:layout_marginBottom="20dp"
+                app:tint="#FFA500" />
+
+            <!-- Upload ID Proof -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload ID Proof"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="6dp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_upload"
+                android:layout_marginBottom="20dp"
+                app:tint="#FFA500" />
+
+            <!-- Experience -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Experience"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="6dp" />
+
+            <Spinner
+                android:id="@+id/spinnerExperience"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#1E1E1E"
+                android:popupBackground="#1E1E1E"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Preferred Exam Locations -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preferred Exam Locations"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Location 1\nLocation 2\nLocation 3"
+                android:gravity="top"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Terms -->
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to the Terms of Service and Privacy Policy"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Create Account Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Create Account"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp"
+                app:backgroundTint="#FFA500"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Already Have Account -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

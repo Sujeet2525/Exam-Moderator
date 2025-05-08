@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="24dp"
+    android:id="@+id/main"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Moderator Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moderator"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFA500"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Welcome Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back"
+            android:textSize="16sp"
+            android:textColor="#CCCCCC"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Email or Phone Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:startIconDrawable="@android:drawable/ic_menu_send"
+            app:boxBackgroundColor="#1E1E1E"
+            app:boxStrokeColor="#FFA500"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmailPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email or Phone"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@android:drawable/ic_lock_lock"
+            app:boxBackgroundColor="#1E1E1E"
+            app:boxStrokeColor="#FFA500"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#FFA500"
+            android:textSize="14sp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Sign In Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sign In"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#FFA500"
+            android:layout_marginBottom="24dp" />
+
+        <!-- OR Divider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or continue with"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Face ID & Fingerprint -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFaceID"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Face ID"
+                android:textColor="#FFFFFF"
+                android:icon="@android:drawable/ic_lock_lock"
+                app:backgroundTint="#333333"
+                app:cornerRadius="12dp"
+                android:layout_marginEnd="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFingerprint"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Fingerprint"
+                android:textColor="#FFFFFF"
+                android:icon="@android:drawable/ic_menu_gallery"
+                app:backgroundTint="#333333"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+        <!-- Sign Up Text -->
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="#FFA500"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+        <Button
+            android:id="@+id/btnSignUp"
+            android:text="Sign Up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+</ScrollView>

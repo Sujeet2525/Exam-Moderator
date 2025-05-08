@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#000000"
+    android:id="@+id/main"
+    tools:context=".ApplyActivity"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply for Exam Moderation"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Subject Expertise Dropdown -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject Expertise"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spinner_subject"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_bg"
+            android:popupBackground="#263238"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <!-- Years of Experience -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Years of Experience"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_experience"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Enter years of experience"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#90A4AE"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Preferred Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preferred Location"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Enter preferred location"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#90A4AE"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Time Slots -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Time Slots"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/cb_morning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="Morning"
+                android:textColor="#FFFFFF"
+                android:checked="true"
+                android:buttonTint="@color/white" />
+
+            <CheckBox
+                android:id="@+id/cb_afternoon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="Afternoon"
+                android:textColor="#FFFFFF"
+                android:checked="true"
+                android:buttonTint="@color/white" />
+
+            <CheckBox
+                android:id="@+id/cb_evening"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="Evening"
+                android:textColor="#FFFFFF"
+                android:buttonTint="@color/white" />
+
+            <CheckBox
+                android:id="@+id/cb_weekend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:text="Weekend"
+                android:textColor="#FFFFFF"
+                android:buttonTint="@color/white" />
+
+        </GridLayout>
+
+
+        <!-- Additional Notes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Additional Notes"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_notes"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Any additional information..."
+            android:padding="12dp"
+            android:gravity="top|start"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#90A4AE"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Application"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</ScrollView>
+
